@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Madness - Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon">
+</head>
+<body>
+    
+    <a href="/options">
+        <img src="{{ url_for('static', filename='back_icon.png') }}" alt="Back" class="back-icon">
+    </a>
+
+    <div class="container">
+        <h1>Error</h1>
+        <p class="error-message">{{ message }}</p>
+        <a href="/" class="start-button">Go Back Home</a>
+    </div>
+</body>
+</html>

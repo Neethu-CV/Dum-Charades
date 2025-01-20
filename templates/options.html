@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Madness - Options</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon">
+</head>
+<body>
+    <a href="/">
+        <img src="{{ url_for('static', filename='back_icon.png') }}" alt="Back" class="back-icon">
+    </a>
+
+    <div class="container" style="background-color: rgb(14, 149, 168);">
+        <h1>Choose Options</h1>
+        <form method="POST" action="/game" >
+            <h2>Languages</h2>
+            <div class="option-group">
+                <input type="checkbox" id="telugu" name="languages" value="telugu" class="hidden-checkbox">
+                <label class="option-label" for="telugu">Telugu</label>
+
+                <input type="checkbox" id="kannada" name="languages" value="kannada" class="hidden-checkbox">
+                <label class="option-label" for="kannada">Kannada</label>
+
+                <input type="checkbox" id="hindi" name="languages" value="hindi" class="hidden-checkbox">
+                <label class="option-label" for="hindi">Hindi</label>
+            </div>
+
+            <h2>Timeframe</h2>
+            <div class="option-group">
+                <input type="checkbox" id="timeless_classics" name="categories" value="timeless_classics" class="hidden-checkbox">
+                <label class="option-label" for="timeless_classics">Timeless Classics</label>
+
+                <input type="checkbox" id="new_age_blockbusters" name="categories" value="new_age_blockbusters" class="hidden-checkbox">
+                <label class="option-label" for="new_age_blockbusters">New Age Blockbusters</label>
+            </div>
+
+            <input id="" type="submit" value="Start Game" class="start-button">
+        </form>
+    </div>
+</body>
+</html>

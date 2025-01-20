@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Madness</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon">
+</head>
+<body>
+    <div class="container" style="background-color: rgb(14, 149, 168);">
+        <img src="{{ url_for('static', filename='intro_logo.png') }}" alt="Intro Logo" class="intro-logo">
+        <form id="submit" action="/options" method="post">
+            <div> 
+                <input id="" type="submit" value="Start Game" class="start-button">
+            </div>
+        </form>
+    </div>
+
+    </body>
+</html>

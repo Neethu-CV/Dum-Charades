@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Madness - Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon">
+</head>
+<body>
+    <a href="/options">
+        <img src="{{ url_for('static', filename='back_icon.png') }}" alt="Back" class="back-icon">
+    </a>
+    <div class="container">
+        <div class="movie-details">
+            <img src="{{ movie['poster'] }}" alt="{{ movie['name'] }} Poster" class="movie-poster">
+            <h2 style="font-size: 3rem; padding-top: 10px;">{{ movie['name'] }}</h2>
+            <p>Cast: {{ movie['cast'] }}</p>
+            <p>Year: {{ movie['year'] }}</p>
+        </div>
+        <div class="buttons">
+            <form method="POST">
+                <button style="position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);" type="submit" name="next" class="start-button">Next</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
