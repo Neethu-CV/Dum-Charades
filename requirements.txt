@@ -10,3 +10,4 @@ Flask-SocketIO==5.1.1
 eventlet==0.35.0
 python-engineio==4.3.0
 python-socketio==5.4.0
+greenlet>=0.3
